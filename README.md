@@ -1,11 +1,16 @@
-This repository contains a complete Machine Learning + MLOps pipeline for predicting whether a customer will purchase a tourism package.
-The project includes:
+This repository implements a complete Machine Learning + MLOps workflow for predicting whether a customer will purchase a tourism package.
 
-✔ Model building with experimentation tracking using MLflow
-✔ Hyperparameter tuning using GridSearchCV
-✔ Model registration in the Hugging Face Model Hub
-✔ Deployment using Streamlit + Docker + HuggingFace Spaces
-✔ Automated training pipeline using GitHub Actions
+ Project Features
+
+Model Development with MLflow experiment tracking
+
+Hyperparameter Tuning using GridSearchCV
+
+Model Registry on Hugging Face Model Hub
+
+Deployment using Streamlit + Docker + HuggingFace Spaces
+
+CI/CD Automation using GitHub Actions
 
 Tourism_Package_Prediction/
 │

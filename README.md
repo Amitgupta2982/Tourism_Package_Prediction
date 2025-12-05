@@ -1,74 +1,57 @@
 This repository implements a complete Machine Learning + MLOps workflow for predicting whether a customer will purchase a tourism package.
 
- Project Features
+Project Overview
+"Visit with Us" tourism company's MLOps pipeline for predicting customer purchase likelihood of the Wellness Tourism Package. This end-to-end machine learning solution automates customer targeting through data-driven predictions.
 
-Model Development with MLflow experiment tracking
+Business Objective
+Build an automated system that:
 
-Hyperparameter Tuning using GridSearchCV
+Predicts whether customers will purchase the Wellness Tourism Package
+Optimizes marketing campaigns through targeted customer identification
+Implements scalable MLOps practices for continuous model improvement
+Reduces manual effort and improves campaign performance
+Dataset Description
+The dataset contains customer demographics and interaction data with 20 features:
 
-Model Registry on Hugging Face Model Hub
+Customer Details:
 
-Deployment using Streamlit + Docker + HuggingFace Spaces
+CustomerID, Age, Gender, MaritalStatus, CityTier, Occupation, Designation
+MonthlyIncome, NumberOfPersonVisiting, NumberOfChildrenVisiting
+NumberOfTrips, Passport, OwnCar, PreferredPropertyStar
+Sales Interaction Data:
 
-CI/CD Automation using GitHub Actions
+TypeofContact, DurationOfPitch, ProductPitched, NumberOfFollowups
+PitchSatisfactionScore
+Target Variable:
 
-Tourism_Package_Prediction/
-│
-├── data/
-│   ├── tourism.csv
-│   ├── Xtrain.csv
-│   ├── Xtest.csv
-│   ├── ytrain.csv
-│   └── ytest.csv
-│
-├── model_building/
-│   ├── dev_experiment.ipynb
-│   └── train.py      ← Production model training script
-│
-├── deployment/
-│   ├── app.py        ← Streamlit UI
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── host_to_hf.py ← Upload deployment files to HuggingFace Space
-│
-├── .github/
-│   └── workflows/
-│       └── pipeline.yml  ← CI/CD automation
-│
-└── README.md
-
-
-Model Building & Experimentation Tracking
-
-✔ Development Environment
-
-The development notebook performs:
-
-Data cleaning and preprocessing
-
-Label encoding of categorical data
-
-Feature scaling
-
-Hyperparameter tuning using GridSearchCV
-
+ProdTaken (0: No purchase, 1: Purchase)
+MLOps Pipeline Architecture
+1. Data Registration
+Upload original dataset to HuggingFace Hub
+Establish data versioning and accessibility
+2. Data Preparation
+Load data from HuggingFace Hub
+Clean and handle missing values
+Feature engineering (income categories, age groups)
+Encode categorical variables
+Split into train/test sets (80/20)
+Upload processed datasets to HuggingFace
+3. Model Building & Experimentation
+Train multiple ML algorithms:
+Decision Tree
+Random Forest
+Gradient Boosting
+XGBoost
+AdaBoost
+Hyperparameter tuning with GridSearchCV
 MLflow experiment tracking
-
-
-Production Training Pipeline
-
-The production script train.py:
-
-Loads train & test data from Hugging Face Dataset Hub
-Builds preprocessing (scaling + one-hot encoding)
- Trains XGBoost using hyperparameter tuning
- Logs evaluation metrics to MLflow
- Saves the best model
-Uploads it to Hugging Face Model Hub
-
-Model Hub Location
-
-🔗 https://huggingface.co/Amitgupta2982/Tourism-Package-Model
-
-Saving the best model as best_xgboost_tourism_dev.pkl
-
+Model evaluation and comparison
+Register best model to HuggingFace Model Hub
+4. Deployment
+Containerized deployment with Docker
+Streamlit web application for predictions
+Automated deployment to HuggingFace Spaces
+5. CI/CD Pipeline
+GitHub Actions workflow automation
+Automated testing and deployment
+Continuous integration on main branch updates

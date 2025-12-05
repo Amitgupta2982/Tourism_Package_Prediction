@@ -50,5 +50,146 @@ The dataset contains **customer demographics + interaction features** (20 total)
 
 ---
 
-## 🏗️ MLOps Pipeline Architecture
+##  MLOps Pipeline Architecture
+
+Raw Data → HF Dataset Hub
+→ Data Prep (cleaning, encoding, splits)
+→ MLflow Training (GridSearchCV + XGBoost)
+→ Best Model Saved + Uploaded to Hugging Face
+→ Dockerized Streamlit App
+→ Deployed to Hugging Face Spaces
+→ Automated CI/CD via GitHub Actions
+
+
+
+---
+
+##  **1. Data Registration (HuggingFace Hub)**
+
+✔ Upload raw dataset  
+✔ Enable dataset versioning  
+
+Script:
+
+
+---
+
+##  **2. Data Preparation**
+
+Performed tasks:
+
+- Remove unnecessary columns  
+- Encode categorical values  
+- Train/Test split  
+- Upload prepared datasets to HuggingFace  
+
+Script:
+
+
+
+
+---
+
+## 🤖 **3. Model Building & Experiment Tracking**
+
+Algorithm used:
+
+- **XGBoost Classifier**
+
+Includes:
+
+- Hyperparameter tuning (`GridSearchCV`)
+- MLflow experiment tracking
+- Classification performance evaluation
+- Best model registration to HuggingFace Model Hub  
+
+Script:
+
+
+
+---
+
+##  **4. Deployment (Streamlit + Docker + HuggingFace Spaces)**
+
+The application:
+
+- Loads model directly from HuggingFace  
+- Collects user inputs  
+- Generates real-time predictions  
+
+Deployment files:
+
+
+Live App Link 🔗:  
+ **https://huggingface.co/spaces/Amitgupta2982/Tourism-Package-App**
+
+---
+
+##  **5. CI/CD Pipeline (GitHub Actions)**
+
+Automated steps:
+
+✔ Dataset registration  
+✔ Data preparation  
+✔ Model training + MLflow logging  
+✔ Model deployment  
+✔ Push to HuggingFace Space  
+
+Workflow file:
+
+
+Triggered on push to:
+
+
+---
+
+## 📁 **Project Folder Structure**
+
+```plaintext
+Tourism_Package_Prediction/
+│
+├── data/
+│   └── tourism.csv
+│
+├── model_building/
+│   ├── data_register.py
+│   ├── prep.py
+│   └── train.py
+│
+├── deployment/
+│   ├── Dockerfile
+│   ├── app.py
+│   └── requirements.txt
+│
+├── hosting/
+│   └── hosting.py
+│
+└── requirements.txt
+
+
+Important Links
+Component	Link
+🗂 GitHub Repository	https://github.com/Amitgupta2982/Tourism_Package_Prediction
+
+🤗 HuggingFace Space	https://huggingface.co/spaces/Amitgupta2982/Tourism-Package-App
+
+HuggingFace Model Hub	https://huggingface.co/Amitgupta2982/Tourism-Package-Model
+
+Conclusion
+
+This project demonstrates a fully automated MLOps workflow for tourism package prediction:
+
+✔ Automated data ingestion
+✔ Dataset versioning
+✔ MLflow experiment tracking
+✔ Best model registry
+✔ Containerized deployment
+✔ CI/CD automation
+✔ Production-ready prediction system
+
+
+
+
+
+
 

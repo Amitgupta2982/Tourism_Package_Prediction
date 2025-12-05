@@ -81,7 +81,7 @@ Performed tasks:
 
 ---
 
-## 🤖 **3. Model Building & Experiment Tracking**
+##  **3. Model Building & Experiment Tracking**
 
 Algorithm used:
 
@@ -117,11 +117,11 @@ Live App Link 🔗:
 
 Automated steps:
 
-✔ Dataset registration  
-✔ Data preparation  
-✔ Model training + MLflow logging  
-✔ Model deployment  
-✔ Push to HuggingFace Space  
+ Dataset registration  
+ Data preparation  
+ Model training + MLflow logging  
+ Model deployment  
+ Push to HuggingFace Space  
 
 ---
 

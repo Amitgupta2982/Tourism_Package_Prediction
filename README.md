@@ -60,17 +60,12 @@ Raw Data → HF Dataset Hub
 → Deployed to Hugging Face Spaces
 → Automated CI/CD via GitHub Actions
 
-
-
 ---
 
 ##  **1. Data Registration (HuggingFace Hub)**
 
 ✔ Upload raw dataset  
 ✔ Enable dataset versioning  
-
-Script:
-
 
 ---
 
@@ -82,10 +77,6 @@ Performed tasks:
 - Encode categorical values  
 - Train/Test split  
 - Upload prepared datasets to HuggingFace  
-
-Script:
-
-
 
 
 ---
@@ -102,9 +93,6 @@ Includes:
 - MLflow experiment tracking
 - Classification performance evaluation
 - Best model registration to HuggingFace Model Hub  
-
-Script:
-
 
 
 ---
@@ -134,12 +122,6 @@ Automated steps:
 ✔ Model training + MLflow logging  
 ✔ Model deployment  
 ✔ Push to HuggingFace Space  
-
-Workflow file:
-
-
-Triggered on push to:
-
 
 ---
 

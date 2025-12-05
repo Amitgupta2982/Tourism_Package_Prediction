@@ -1,13 +1,21 @@
 This repository implements a complete Machine Learning + MLOps workflow for predicting whether a customer will purchase a tourism package.
 
-Project Overview
-
-"Visit with Us" tourism company's MLOps pipeline for predicting customer purchase likelihood of the Wellness Tourism Package. This end-to-end machine learning solution automates customer targeting through data-driven predictions.
-
 Business Objective
 
-Build an automated system that Predicts whether customers will purchase the Wellness Tourism Package Optimizes marketing campaigns through targeted customer identification Implements scalable MLOps practices for continuous model improvement Reduces manual effort and improves campaign performance
+"Visit with Us" aims to automate and improve customer targeting for their new Wellness Tourism Package.
 
+The objective is to:
+
+1. Predict the likelihood of a customer purchasing the package before contacting them
+
+2. Optimize marketing campaigns through targeted customer identification
+
+3. Reduce manual effort and eliminate inconsistency in customer prioritization
+
+4. Implement a scalable, repeatable, automated MLOps pipeline
+
+5. Ensure continuous model improvement via CI/CD
+   
 Dataset Description
 
 The dataset contains customer demographics and interaction data with 20 features:

@@ -126,7 +126,7 @@ Model publishing to HuggingFace
 Project Structure 
 
 
-Tourism_Package_Prediction/
+Tourism_Package_Prediction
 │
 ├── data/
 │   └── tourism.csv

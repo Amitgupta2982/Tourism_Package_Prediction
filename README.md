@@ -33,45 +33,116 @@ Target Variable:
 
 ProdTaken (0: No purchase, 1: Purchase)
 
-MLOps Pipeline Architecture
+MLOps Pipeline Architecture 
+
+Below is the complete automated pipeline implemented in this project:
 
 1. Data Registration
    
-Upload original dataset to HuggingFace Hub
+tore raw dataset on HuggingFace Dataset Hub
 
-Establish data versioning and accessibility
+Enable data versioning, reproducibility, and controlled access
+
+Ensure downstream steps always fetch the correct dataset version
 
 3. Data Preparation
    
 Load data from HuggingFace Hub
 
-Clean and handle missing values
+Perform:
 
-Feature engineering (income categories, age groups)
+Missing value handling
 
-Encode categorical variables
+Column cleanup (remove identifiers)
 
-Split into train/test sets (80/20)
+Encoding categorical variables
 
-Upload processed datasets to HuggingFace
+Feature engineering (optional)
 
-5. Model Building & Experimentation
+Train/Test split (80/20)
+
+Upload processed datasets back to HuggingFace
+
+4. Model Building & Experimentation (Development Mode)
    
-XGBoost
+Model: XGBoost Classifier
 
-Hyperparameter tuning with GridSearchCV
-MLflow experiment tracking
-Model evaluation and comparison
-Register best model to HuggingFace Model Hub
+Hyperparameter tuning using GridSearchCV
 
-7. Deployment
+Track:
+
+Parameters
+
+Metrics
+
+Artifacts using MLflow
+
+Evaluate performance on train & test sets
+
+5. Model Registration (Production Mode)
    
-Containerized deployment with Docker
-Streamlit web application for predictions
-Automated deployment to HuggingFace Spaces
+Save best-performing model as .joblib
 
-9. CI/CD Pipeline
+Push model file to HuggingFace Model Hub
+
+Model becomes versioned, reproducible, and accessible for deployment
+
+6. Deployment
     
-GitHub Actions workflow automation
-Automated testing and deployment
-Continuous integration on main branch updates
+Streamlit Web App
+
+User-friendly interface for real-time predictions
+
+Runs inside a Docker container
+
+HuggingFace Spaces Deployment
+
+Automated hosting of:
+
+Dockerfile
+
+Streamlit app
+
+Requirements
+
+CI/CD ensures the app updates whenever new code is pushed
+
+7. CI/CD Pipeline (GitHub Actions)
+
+Automated steps include:
+
+Dataset registration
+
+Data preprocessing
+
+Model training
+
+Model evaluation
+
+Model publishing to HuggingFace
+
+
+
+Project Structure 
+
+
+Tourism_Package_Prediction/
+│
+├── data/
+│   └── tourism.csv
+│
+├── model_building/
+│   ├── data_register.py
+│   ├── prep.py
+│   └── train.py
+│
+├── deployment/
+│   ├── Dockerfile
+│   ├── app.py
+│   └── requirements.txt
+│
+├── hosting/
+│   └── hosting.py
+│
+└── requirements.txt
+

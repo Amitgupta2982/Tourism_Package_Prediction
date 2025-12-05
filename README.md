@@ -1,9 +1,11 @@
 This repository implements a complete Machine Learning + MLOps workflow for predicting whether a customer will purchase a tourism package.
 
 Project Overview
+
 "Visit with Us" tourism company's MLOps pipeline for predicting customer purchase likelihood of the Wellness Tourism Package. This end-to-end machine learning solution automates customer targeting through data-driven predictions.
 
 Business Objective
+
 Build an automated system that:
 
 Predicts whether customers will purchase the Wellness Tourism Package

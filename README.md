@@ -64,8 +64,8 @@ Raw Data → HF Dataset Hub
 
 ##  **1. Data Registration (HuggingFace Hub)**
 
-✔ Upload raw dataset  
-✔ Enable dataset versioning  
+ Upload raw dataset  
+ Enable dataset versioning  
 
 ---
 
